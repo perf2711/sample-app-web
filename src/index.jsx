@@ -5,6 +5,7 @@ import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
 
 import { BacktraceClient, ErrorBoundary } from "@backtrace/react";
+import { BacktraceSessionReplayModule } from "@backtrace/session-replay";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Route, BrowserRouter as Router } from "react-router-dom";
@@ -32,7 +33,9 @@ BacktraceClient.initialize({
     user: currentUser(),
     shoppingCart: ShoppingCart.getCartContents(),
   }),
-});
+}, (builder) => builder.useModule(new BacktraceSessionReplayModule({
+  maxEventCount: 100
+})));
 
 const routing = (
   <ErrorBoundary>
