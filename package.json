@@ -30,9 +30,11 @@
     "@babel/plugin-proposal-private-methods": "^7.13.0",
     "@babel/preset-env": "^7.13.12",
     "@babel/register": "^7.13.14",
-    "@backtrace/javascript-cli": "^0.3.2"
+    "@backtrace/javascript-cli": "^0.3.2",
+    "serve": "^14.2.3"
   },
   "scripts": {
+    "serve": "serve ./build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
