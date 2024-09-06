@@ -1,7 +1,7 @@
-import React, { useState as useStateMock } from "react";
 import { shallow } from "enzyme";
-import Login from "../Login";
+import React, { useState as useStateMock } from "react";
 import * as Credentials from "../../utils/Credentials";
+import Login from "../Login";
 
 jest.mock("react", () => ({
   ...jest.requireActual("react"),
@@ -9,7 +9,7 @@ jest.mock("react", () => ({
   useEffect: (f) => f(),
 }));
 
-jest.mock("@backtrace-labs/react", () => ({
+jest.mock("@backtrace/react", () => ({
   BacktraceClient: {
     instance: {
       send: jest.fn(),

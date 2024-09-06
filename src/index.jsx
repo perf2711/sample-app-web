@@ -4,7 +4,7 @@
 import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
 
-import { BacktraceClient, ErrorBoundary } from "@backtrace-labs/react";
+import { BacktraceClient, ErrorBoundary } from "@backtrace/react";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Route, BrowserRouter as Router } from "react-router-dom";
@@ -20,9 +20,9 @@ import Login from "./pages/Login";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import { ROUTES } from "./utils/Constants";
 import { currentUser } from "./utils/Credentials";
-import { ShoppingCart } from "./utils/shopping-cart";
 import { InventoryData } from "./utils/InventoryData.js";
 import { InventoryDataLong } from "./utils/InventoryDataLong.js";
+import { ShoppingCart } from "./utils/shopping-cart";
 
 BacktraceClient.initialize({
   name: "Swag Store",

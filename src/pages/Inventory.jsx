@@ -1,18 +1,18 @@
+import { BacktraceClient } from "@backtrace/react";
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
-import {
-  isErrorUser,
-  isPerformanceGlitchUser,
-  isProblemUser,
-  isVisualUser,
-} from "../utils/Credentials";
-import InventoryListItem from "../components/InventoryListItem";
 import SwagLabsFooter from "../components/Footer";
 import HeaderContainer from "../components/HeaderContainer";
-import { sortAsc, sortDesc, sortHiLo, sortLoHi } from "../utils/Sorting";
+import InventoryListItem from "../components/InventoryListItem";
 import Select from "../components/Select";
+import {
+    isErrorUser,
+    isPerformanceGlitchUser,
+    isProblemUser,
+    isVisualUser,
+} from "../utils/Credentials";
+import { sortAsc, sortDesc, sortHiLo, sortLoHi } from "../utils/Sorting";
 import "./Inventory.css";
-import { BacktraceClient } from "@backtrace-labs/react";
 
 const Inventory = ({data}) => {
   const InventoryData = data;

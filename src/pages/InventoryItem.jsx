@@ -1,15 +1,15 @@
+import { ErrorBoundary } from "@backtrace/react";
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
-import { isProblemUser, isErrorUser } from "../utils/Credentials";
-import { ROUTES } from "../utils/Constants";
-import { ShoppingCart } from "../utils/shopping-cart";
-import { InventoryData } from "../utils/InventoryData";
-import HeaderContainer from "../components/HeaderContainer";
+import BrokenComponent from "../components/BrokenComponent";
 import Button, { BUTTON_SIZES, BUTTON_TYPES } from "../components/Button";
 import SwagLabsFooter from "../components/Footer";
+import HeaderContainer from "../components/HeaderContainer";
+import { ROUTES } from "../utils/Constants";
+import { isErrorUser, isProblemUser } from "../utils/Credentials";
+import { InventoryData } from "../utils/InventoryData";
+import { ShoppingCart } from "../utils/shopping-cart";
 import "./InventoryItem.css";
-import BrokenComponent from "../components/BrokenComponent";
-import { ErrorBoundary } from "@backtrace-labs/react";
 
 const InventoryItem = (props) => {
   useEffect(() => {
@@ -160,7 +160,7 @@ const InventoryItem = (props) => {
                 <img
                   alt={item.name}
                   className="inventory_details_img"
-                  src={require(`../assets/img/${item.image_url}`).default}
+                  src={require(`../assets/img/${item.image_url}`)}
                   data-test={`item-${item.name
                     .replace(/\s+/g, "-")
                     .toLowerCase()}-img`}

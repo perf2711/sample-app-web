@@ -4,7 +4,7 @@
   "version": "3.0.0",
   "private": true,
   "dependencies": {
-    "@backtrace-labs/react": "^0.0.5",
+    "@backtrace/react": "^0.3.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
@@ -29,7 +29,7 @@
     "@babel/plugin-proposal-private-methods": "^7.13.0",
     "@babel/preset-env": "^7.13.12",
     "@babel/register": "^7.13.14",
-    "@backtrace-labs/javascript-cli": "^0.1.2"
+    "@backtrace/javascript-cli": "^0.3.2"
   },
   "scripts": {
     "start": "react-scripts start",

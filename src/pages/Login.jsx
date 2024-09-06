@@ -1,17 +1,16 @@
-import React, { useEffect, Fragment } from "react";
+import { BacktraceClient } from "@backtrace/react";
+import React, { Fragment, useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
-import { useState } from "react";
-import "./Login.css";
-import {
-  isLockedOutUser,
-  setCredentials,
-  verifyCredentials,
-} from "../utils/Credentials";
-import { ROUTES, VALID_USERNAMES, VALID_PASSWORD } from "../utils/Constants";
+import ErrorMessage from "../components/ErrorMessage";
 import InputError, { INPUT_TYPES } from "../components/InputError";
 import SubmitButton from "../components/SubmitButton";
-import ErrorMessage from "../components/ErrorMessage";
-import { BacktraceClient } from "@backtrace-labs/react";
+import { ROUTES, VALID_PASSWORD, VALID_USERNAMES } from "../utils/Constants";
+import {
+    isLockedOutUser,
+    setCredentials,
+    verifyCredentials,
+} from "../utils/Credentials";
+import "./Login.css";
 
 function Login(props) {
   const { history, location } = props;

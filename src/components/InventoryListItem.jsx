@@ -1,11 +1,11 @@
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { withRouter } from "react-router-dom";
-import PropTypes from "prop-types";
-import { ShoppingCart } from "../utils/shopping-cart";
-import { isErrorUser, isProblemUser } from "../utils/Credentials";
-import "./InventoryListItem.css";
 import { ROUTES } from "../utils/Constants";
+import { isErrorUser, isProblemUser } from "../utils/Credentials";
+import { ShoppingCart } from "../utils/shopping-cart";
 import Button, { BUTTON_SIZES, BUTTON_TYPES } from "./Button";
+import "./InventoryListItem.css";
 
 const InventoryListItem = (props) => {
   const {
@@ -119,7 +119,7 @@ const InventoryListItem = (props) => {
           <img
             alt={name}
             className="inventory_item_img"
-            src={require(`../assets/img/${image_url}`).default}
+            src={require(`../assets/img/${image_url}`)}
             data-test={`inventory-item-${name
               .replace(/\s+/g, "-")
               .toLowerCase()}-img`}
